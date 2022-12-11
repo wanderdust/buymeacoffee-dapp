@@ -1,27 +1,16 @@
-import React, { useEffect, useState } from "react";
-import { ToastContainer, toast } from "react-toastify";
-import { ethers } from "ethers";
+import { useEffect, useState } from "react";
 import "react-toastify/dist/ReactToastify.css";
-import { isWalletConnected, getConnectedWallet, connectNewWallet } from "./utils/metamask";
-import { getSmartContract, buyCoffee, getCoffeeCount, getAllCoffee } from "./utils/buyCoffee";
 import ConnectWallet from "./connectWallet";
+import { getConnectedWallet, isWalletConnected } from "./utils/metamask";
 import BuyCoffee from "./buyCoffee";
 
 
-import Head from "next/head";
-import abi from '../utils/CoffeePortal.json';
-
 export default function Home() {
     // Smart Contract address
-    const contractAddress = "0x8349482D0E6527ad294068Af095262Fd1498df9e";
-    const contractABI = abi.abi;
+
 
     // State variables
     const [currentAccount, setCurrentAccount] = useState("");
-    const [message, setMessage] = useState("");
-    const [name, setName] = useState("");
-    const [allCoffee, setAllCoffee] = useState([]);
-
 
     useEffect(() => {
         /**
@@ -47,7 +36,7 @@ export default function Home() {
         <div className="flex justify-center">
 
             {currentAccount ? (
-                "Wallet connected"
+                <BuyCoffee />
             ) : (
                 <ConnectWallet />
             )
