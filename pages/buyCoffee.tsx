@@ -11,7 +11,7 @@ export default function BuyCoffee() {
     const [transactionInProgress, setTransactionInProgress] = useState(false);
 
 
-    const contractAddress = "0x8349482D0E6527ad294068Af095262Fd1498df9e";
+    const contractAddress = "0x0165878A594ca255338adfa4d48449f69242Eb8F";
     const contractABI = abi.abi;
 
     const getSmartContract = async (contractAddress: string, contractABI: any) => {
@@ -35,8 +35,8 @@ export default function BuyCoffee() {
         );
         await transaction.wait();
 
-        setTransactionInProgress(false);
         setCoffeePurchased(true);
+        setTransactionInProgress(false);
     }
 
     useEffect(() => {
