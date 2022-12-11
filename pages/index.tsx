@@ -1,13 +1,25 @@
 import { useEffect, useState } from "react";
 import "react-toastify/dist/ReactToastify.css";
 import ConnectWallet from "./connectWallet";
-import { getConnectedWallet, isWalletConnected } from "./utils/metamask";
 import BuyCoffee from "./buyCoffee";
 
 
 export default function Home() {
     // State variables
     const [currentAccount, setCurrentAccount] = useState("");
+
+    const isWalletConnected = async () => {
+        if (!window.ethereum) {
+            return false;
+        }
+        const accounts = await window.ethereum.request({ method: 'eth_accounts' });
+        return accounts.length > 0
+    };
+
+    const getConnectedWallet = async () => {
+        const accounts: [any] = await window.ethereum.request({ method: 'eth_accounts' });
+        return accounts[0];
+    };
 
     useEffect(() => {
         /**
@@ -30,15 +42,16 @@ export default function Home() {
 
 
     return (
-        <div className="flex justify-center">
-
+        <div className="flex items-center justify-center h-screen flex-col p-10">
             {currentAccount ? (
                 <BuyCoffee />
             ) : (
                 <ConnectWallet />
             )
             }
+
         </div>
+
     )
 
 }
