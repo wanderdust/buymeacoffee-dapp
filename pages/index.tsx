@@ -46,7 +46,7 @@ export default function Home() {
             <div className="flex justify-center absolute top-0 bg-yellow-400 w-full pt-6 pb-6">
                 <p>
                     This app only works using Goerli Ethereum,
-                    a tesnet that is free to use. Don't try sending real ethereum.
+                    a tesnet that is free to use. Don't try sending real Ethereum.
                 </p>
             </div>
 
