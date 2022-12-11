@@ -4,6 +4,9 @@ import { ethers } from "ethers";
 import "react-toastify/dist/ReactToastify.css";
 import { isWalletConnected, getConnectedWallet, connectNewWallet } from "./utils/metamask";
 import { getSmartContract, buyCoffee, getCoffeeCount, getAllCoffee } from "./utils/buyCoffee";
+import ConnectWallet from "./connectWallet";
+import BuyCoffee from "./buyCoffee";
+
 
 import Head from "next/head";
 import abi from '../utils/CoffeePortal.json';
@@ -43,7 +46,12 @@ export default function Home() {
     return (
         <div className="flex justify-center">
 
-            <button></button>
+            {currentAccount ? (
+                "Wallet connected"
+            ) : (
+                <ConnectWallet />
+            )
+            }
         </div>
     )
 
