@@ -6,9 +6,6 @@ import BuyCoffee from "./buyCoffee";
 
 
 export default function Home() {
-    // Smart Contract address
-
-
     // State variables
     const [currentAccount, setCurrentAccount] = useState("");
 
@@ -29,7 +26,7 @@ export default function Home() {
         };
 
         setWallet();
-    }, []);
+    }, [isWalletConnected]);
 
 
     return (
