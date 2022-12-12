@@ -5,7 +5,7 @@ import TransactionList from "./transactionList";
 
 
 export default function BuyCoffee() {
-    const [contract, setContract] = useState(null);
+    const [contract, setContract] = useState<any>(null);
     const [message, setMessage] = useState("");
     const [name, setName] = useState("");
     const [amount, setAumount] = useState("0");
