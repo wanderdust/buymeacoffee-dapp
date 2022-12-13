@@ -4,10 +4,21 @@ import { useState } from "react";
 
 export default function ConnectWallet() {
     const [wallet, setWallet] = useState(null);
+    const [error, setError] = useState("");
 
     const connectNewWallet = async () => {
-        const accounts: [any] = await window.ethereum.request({ method: 'eth_requestAccounts' });
-        setWallet(accounts[0]);
+        try {
+            const accounts: [any] = await window.ethereum.request({ method: 'eth_requestAccounts' })
+            setWallet(accounts[0]);
+        } catch (error: any) {
+            if (error instanceof TypeError) {
+                setError("Metamask Wallet not found. Please add the Metamask extension,");
+                return;
+            }
+            setError(error.message);
+        }
+
+
     }
 
     const card = (message: string) => {
@@ -20,6 +31,11 @@ export default function ConnectWallet() {
 
     return (
         <div className="flex items-center flex-col" >
+            {!!error && (
+                <div className="bg-red-100 border border-red-400 text-green-700 px-4 py-3 rounded relative mb-4" role="alert">
+                    <span className="block sm:inline">{error} Refresh the page and try again.</span>
+                </div>
+            )}
             <h1 className="text-3xl font-bold">How it Works</h1>
             <div className="flex flex-row mb-8">
                 {card("1. Connect your Metamask Wallet")}
