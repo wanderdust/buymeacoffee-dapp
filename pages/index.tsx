@@ -42,8 +42,8 @@ export default function Home() {
 
 
     return (
-        <div className="flex items-center justify-center h-screen flex-col p-10">
-            <div className="flex justify-center absolute top-0 bg-yellow-400 w-full pt-6 pb-6">
+        <div className="flex flex-col">
+            <div className="flex justify-center bg-yellow-400 w-full py-6 px-6 mb-10 md:mb-24">
                 <p>
                     This app only works using Goerli Ethereum,
                     a tesnet that is free to use. Don't try sending real Ethereum.

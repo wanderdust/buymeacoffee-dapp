@@ -69,7 +69,7 @@ export default function BuyCoffee() {
 
     return (
         <div className="flex flex-col items-center">
-            <div className="flex justify-center flex-col p-12 shadow-md rounded-lg w-96" >
+            <div className="flex justify-center flex-col p-6 md:p-12 shadow-md rounded-lg w-80 md:w-96" >
                 {coffePurchased && (
                     <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4" role="alert">
                         <span className="block sm:inline">Coffee purchased successfully!</span>
@@ -103,7 +103,7 @@ export default function BuyCoffee() {
                         ))
                     }
                 </div>
-                <p className="mb-2">Selected amount {amount} ETH</p>
+                <p className="mb-2">Selected amount <span className="font-bold">{amount} ETH</span></p>
 
                 <button
                     className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded disabled:bg-gray-500 disabled:cursor-not-allowed"
