@@ -23,7 +23,7 @@ export default function ConnectWallet() {
 
     const card = (message: string) => {
         return (
-            <div className="flex flex-row bg-gray-100 w-48 rounded m-6 items-center text-center">
+            <div className="flex flex-row bg-gray-100 w-48 rounded m-2 md:m-6 items-center text-center">
                 <p className="p-3 font-normal">{message}</p>
             </div>
         )
@@ -37,7 +37,7 @@ export default function ConnectWallet() {
                 </div>
             )}
             <h1 className="text-3xl font-bold">How it Works</h1>
-            <div className="flex flex-row mb-8">
+            <div className="flex flex-col md:flex-row mb-8">
                 {card("1. Connect your Metamask Wallet")}
                 {card("2. Select how much coffee to buy")}
                 {card("3. Confirm transaction in your Wallet")}

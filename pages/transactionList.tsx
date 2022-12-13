@@ -11,7 +11,8 @@ export default function TransactionList({ allCoffee = [] }: any) {
                             <p className="font-medium hidden md:block">Address: <span className="font-normal">{coffee.address}</span></p>
                             <p className="font-medium">Message: <span className="font-normal">{coffee.message}</span></p>
                         </div>
-                        <p className="">{coffee.timestamp.toDateString()}</p>
+                        <p className="hidden md:block">{coffee.timestamp.toDateString()}</p>
+                        <p className="md:hidden">{coffee.timestamp.toLocaleDateString()}</p>
                     </div>
                 ))}
             </div>
