@@ -2,7 +2,7 @@ export default function TransactionList({ allCoffee = [] }: any) {
 
     return (
         <div className="m-10">
-            <h1 className="text-l font-medium mb-2">Transaction List </h1>
+            <h1 className="text-l font-medium mb-2">Last Transactions </h1>
             <div className="flex flex-col">
                 {allCoffee.length > 0 && allCoffee.map((coffee: any) => (
                     <div className="flex flex-row justify-between p-4 shadow-md rounded-lg mb-4 bg-sky-50">

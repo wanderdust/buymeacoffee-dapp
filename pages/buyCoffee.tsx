@@ -60,7 +60,7 @@ export default function BuyCoffee() {
             };
         });
 
-        setAllCoffee(allCoffee);
+        setAllCoffee(allCoffee.reverse().slice(0, 4));
     };
 
     useEffect(() => {
