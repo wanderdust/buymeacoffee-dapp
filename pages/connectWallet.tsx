@@ -12,7 +12,7 @@ export default function ConnectWallet() {
             setWallet(accounts[0]);
         } catch (error: any) {
             if (error instanceof TypeError) {
-                setError("Metamask Wallet not found. Please add the Metamask extension,");
+                setError("Metamask Wallet not found. Please add the Metamask extension or use a compatible browser.");
                 return;
             }
             setError(error.message);
@@ -36,7 +36,7 @@ export default function ConnectWallet() {
                     <span className="block sm:inline">{error} Refresh the page and try again.</span>
                 </div>
             )}
-            <h1 className="text-3xl font-bold">How it Works</h1>
+            <h1 className="text-2xl font-bold">How it Works</h1>
             <div className="flex flex-col md:flex-row mb-8">
                 {card("1. Connect your Metamask Wallet")}
                 {card("2. Select how much coffee to buy")}
