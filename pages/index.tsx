@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import "react-toastify/dist/ReactToastify.css";
 import ConnectWallet from "./connectWallet";
 import BuyCoffee from "./buyCoffee";
+import Header from "./header";
+import Banner from "./banner";
 
 
 export default function Home() {
@@ -44,6 +46,7 @@ export default function Home() {
     return (
         <div className="flex flex-col items-center">
             <Banner />
+            <Header />
 
             {currentAccount ? (
                 <BuyCoffee />
