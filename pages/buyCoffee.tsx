@@ -69,7 +69,7 @@ export default function BuyCoffee() {
 
     return (
         <div className="flex flex-col items-center">
-            <div className="flex justify-center flex-col p-6 md:p-12 shadow-md rounded-lg w-80 md:w-96" >
+            <div className="flex justify-center flex-col p-6 mt-6 md:mt-24 md:p-12 shadow-md rounded-lg w-80 md:w-96" >
                 {coffePurchased && (
                     <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4" role="alert">
                         <span className="block sm:inline">Coffee purchased successfully!</span>

@@ -1,6 +1,6 @@
 export default function Banner() {
     return (
-        <div className="flex justify-center bg-yellow-400 w-full py-6 px-6 mb-10 md:mb-24">
+        <div className="flex justify-center bg-yellow-400 w-full py-6 px-6 mb-6">
             <p>
                 This app only works using Goerli Ethereum,
                 a tesnet that is free to use. Don't try sending real Ethereum.
