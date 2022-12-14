@@ -8,7 +8,7 @@ export default function Header() {
             </div>
             <div>
                 <p className="text-xl text-center px-6">
-                    This app is uses a <a href="https://github.com/wanderdust/buymeacoffee-smart-contract">Smart Contract</a> deployed on the (Goerli) Ethereum blockchain that can be used to send payments.
+                    This app interacts with a <a href="https://github.com/wanderdust/buymeacoffee-smart-contract">Smart Contract</a> deployed to the (Goerli) Ethereum blockchain to take coffee donations.
                 </p>
             </div>
         </div>
