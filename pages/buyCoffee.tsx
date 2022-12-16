@@ -16,7 +16,7 @@ export default function BuyCoffee() {
 
     const contractAddress = "0xd84cDB11cb109e0b313590666f10EcbaE0fE5e55";
     const contractABI = abi.abi;
-    const transferAmounts = [["0.0001 ETH (£1)", "0.0001"], ["0.002 ETH (£2)", "0.002"], ["0.005 ETH (£5)", "0.005"]]
+    const transferAmounts = [["0.001 ETH (£1)", "0.001"], ["0.002 ETH (£2)", "0.002"], ["0.005 ETH (£5)", "0.005"]]
 
     const getSmartContract = async (contractAddress: string, contractABI: any) => {
         const provider = new ethers.providers.Web3Provider(window.ethereum);
